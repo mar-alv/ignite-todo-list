@@ -1,6 +1,6 @@
-import { Header } from '@components'
 import { FC, useState } from 'react'
 import styles from './app.module.scss'
+import { Header, CreateTask, NoTasks } from '@components'
 
 export const App: FC = () => {
   const [tasks, setTasks] = useState<any>([])
@@ -15,12 +15,17 @@ export const App: FC = () => {
 
   return (
     <div className={styles.app}>
-      <Header createTask={handleCreateTask} />
+      <Header />
       <main>
+        <CreateTask createTask={handleCreateTask} />
         <header>
-          <p>oi</p>
-          <p>oi</p>
+          <span>Tarefas criadas</span>
+          <span>Concluídas</span>
         </header>
+        {!!tasks.length ? (
+          <p>tralala</p>
+        ) : (<NoTasks />
+        )}
       </main>
     </div>
   )

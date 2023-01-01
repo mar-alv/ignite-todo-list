@@ -1,0 +1,18 @@
+@import '@assets/colors';
+
+.noTasks {
+  text-align: center;
+
+  & img {
+    margin-bottom: 1rem;
+  }
+
+  & h2 {
+    font-weight: bold;
+  }
+
+  & h2,
+  & h3 {
+    color: $gray-300;
+  }
+}

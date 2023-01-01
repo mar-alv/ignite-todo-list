@@ -15,8 +15,8 @@
 
   color: $gray-100;
   background-color: $blue-dark;
-}
 
-.createTaskButton:hover {
-  background-color: $blue;
+  &:hover {
+    background-color: $blue;
+  }
 }

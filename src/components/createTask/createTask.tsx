@@ -1,5 +1,5 @@
-import { Input } from "@components"
 import { FC } from "react"
+import { Input } from "@components"
 import styles from './createTask.module.scss'
 import { CreateTaskButton } from "./createTaskButton/createTaskButton"
 

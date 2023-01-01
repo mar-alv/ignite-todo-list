@@ -1,8 +1,21 @@
-.app main {}
-
-.app main header {
-  color: white;
-  margin: 0 25%;
+.app {
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  flex-direction: column;
+
+  & main {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+
+    left: 50%;
+    width: 50%;
+    margin-top: 11rem;
+    transform: translate(-50%, 0);
+  }
+
+  & main header {
+    display: flex;
+    justify-content: space-between;
+  }
 }

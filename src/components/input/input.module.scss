@@ -1,21 +1,22 @@
 @import '@assets/colors';
 
 .input {
-  padding: 1rem;
-  height: 3.375rem;
-  border-radius: 5px;
-  
+  flex: 1;
   border: none;
   align-self: flex-end;
 
+  padding: 1rem;
+  height: 3.375rem;
+  border-radius: 5px;
+
   color: $gray-100;
   background-color: $gray-500;
-}
 
-.input::placeholder {
-  color: $gray-300;
-}
+  &::placeholder {
+    color: $gray-300;
+  }
 
-.input:focus {
-  border: 1px solid $purple-dark;
+  &:focus {
+    border: 1px solid $purple-dark;
+  }
 }
