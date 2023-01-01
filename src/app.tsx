@@ -1,6 +1,11 @@
+import {
+  Header,
+  NoTasks,
+  CreateTask,
+  TasksCounter
+} from '@components'
 import { FC, useState } from 'react'
 import styles from './app.module.scss'
-import { Header, CreateTask, NoTasks } from '@components'
 
 export const App: FC = () => {
   const [tasks, setTasks] = useState<any>([])
@@ -18,10 +23,10 @@ export const App: FC = () => {
       <Header />
       <main>
         <CreateTask createTask={handleCreateTask} />
-        <header>
-          <span>Tarefas criadas</span>
-          <span>Concluídas</span>
-        </header>
+        <TasksCounter
+          tasksDoneCount={0}
+          totalTasksCount={tasks.length}
+        />
         {!!tasks.length ? (
           <p>tralala</p>
         ) : (<NoTasks />
