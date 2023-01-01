@@ -1,12 +1,16 @@
 import { FC } from "react"
-import './header.module.scss'
-import { Logo, Input } from "@components"
+import styles from './header.module.scss'
+import { Logo, CreateTask } from "@components"
 
-export const Header: FC = () => {
+interface HeaderProps {
+  createTask: () => void
+}
+
+export const Header: FC<HeaderProps> = ({ createTask }) => {
   return (
-    <header>
+    <header className={styles.header}>
       <Logo />
-      <Input />
+      <CreateTask createTask={createTask} />
     </header>
   )
 }

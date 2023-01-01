@@ -1,13 +1,11 @@
 @import '@assets/colors';
 
 .input {
-  height: 3rem;
   padding: 1rem;
+  height: 3.375rem;
   border-radius: 5px;
-  margin-bottom: -27px;
   
   border: none;
-  position: absolute;
   align-self: flex-end;
 
   color: $gray-100;
