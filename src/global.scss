@@ -1,0 +1,25 @@
+@import '@assets/colors';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: $gray-600;
+}
+
+body,
+input,
+button {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: 'Inter', sans-serif;
+}
+
+:focus {
+  border: 1px solid $purple-dark;
+  outline: transparent;
+}

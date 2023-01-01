@@ -1,0 +1,23 @@
+@import '@assets/colors';
+
+.input {
+  height: 3rem;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: -27px;
+  
+  border: none;
+  position: absolute;
+  align-self: flex-end;
+
+  color: $gray-100;
+  background-color: $gray-500;
+}
+
+.input::placeholder {
+  color: $gray-300;
+}
+
+.input:focus {
+  border: 1px solid $purple-dark;
+}

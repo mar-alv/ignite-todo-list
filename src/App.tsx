@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import { Logo } from '@components'
+import { Header } from '@components'
 
 export const App: FC = () => {
   return (
-    <div className="App">
-      <Logo />
+    <div>
+      <Header />
     </div>
   )
 }
