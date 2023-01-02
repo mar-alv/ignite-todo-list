@@ -1,0 +1,21 @@
+@import '@assets/colors';
+
+.deleteTaskButton {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  color: $gray-300;
+
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: $danger;
+    border-radius: 5px;
+    background-color: $gray-400;
+  }
+}

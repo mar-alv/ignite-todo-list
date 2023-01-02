@@ -1,19 +1,33 @@
 import {
   Header,
   NoTasks,
+  TasksList,
   CreateTask,
   TasksCounter
 } from '@components'
+import { ITask } from '@interfaces'
 import { FC, useState } from 'react'
 import styles from './app.module.scss'
 
 export const App: FC = () => {
-  const [tasks, setTasks] = useState<any>([])
+  const [id, setId] = useState(0)
+  const [tasks, setTasks] = useState<ITask[]>([])
 
-  const handleCreateTask = () => {
-    const tasksUpdated = [...tasks]
+  const handleCreateTask = (content: string) => {
+    const newTask = {
+      id,
+      content,
+      done: false
+    } as ITask
 
-    tasksUpdated.push(1)
+    const tasksUpdated = [...tasks, newTask]
+
+    setId(id + 1)
+    setTasks(tasksUpdated)
+  }
+
+  const handleDeleteTask = (taskToBeDeletedId: number) => {
+    const tasksUpdated = tasks.filter(task => task.id !== taskToBeDeletedId)
 
     setTasks(tasksUpdated)
   }
@@ -28,8 +42,9 @@ export const App: FC = () => {
           totalTasksCount={tasks.length}
         />
         {!!tasks.length ? (
-          <p>tralala</p>
-        ) : (<NoTasks />
+          <TasksList tasks={tasks} handleDeleteTask={handleDeleteTask} />
+        ) : (
+          <NoTasks />
         )}
       </main>
     </div>
