@@ -17,7 +17,7 @@ export const App: FC = () => {
     const newTask = {
       id,
       content,
-      done: false
+      isDone: false
     } as ITask
 
     const tasksUpdated = [...tasks, newTask]
@@ -27,9 +27,24 @@ export const App: FC = () => {
   }
 
   const handleDeleteTask = (taskToBeDeletedId: number) => {
-    const tasksUpdated = tasks.filter(task => task.id !== taskToBeDeletedId)
+    const tasksUpdated = [...tasks].filter(task => task.id !== taskToBeDeletedId)
 
     setTasks(tasksUpdated)
+  }
+
+  const handleCompleteTask = (taskToBeCompletedId: number) => {
+    const updatedTasks = [...tasks]
+    const completedTask = updatedTasks.find(task => task.id === taskToBeCompletedId)
+
+    if (completedTask) {
+      completedTask.isDone = !completedTask.isDone
+
+      setTasks(updatedTasks)
+    }
+  }
+
+  const getTasksDoneCount = () => {
+    return tasks.filter(task => task.isDone).length
   }
 
   return (
@@ -38,11 +53,15 @@ export const App: FC = () => {
       <main>
         <CreateTask createTask={handleCreateTask} />
         <TasksCounter
-          tasksDoneCount={0}
           totalTasksCount={tasks.length}
+          tasksDoneCount={getTasksDoneCount()}
         />
         {!!tasks.length ? (
-          <TasksList tasks={tasks} handleDeleteTask={handleDeleteTask} />
+          <TasksList
+            tasks={tasks}
+            handleDeleteTask={handleDeleteTask}
+            handleCompleteTask={handleCompleteTask}
+          />
         ) : (
           <NoTasks />
         )}

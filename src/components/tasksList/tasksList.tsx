@@ -6,11 +6,13 @@ import styles from './tasksList.module.scss'
 interface TasksListProps {
   tasks: ITask[]
   handleDeleteTask: (taskToBeDeletedId: number) => void
+  handleCompleteTask: (taskToBeCompletedId: number) => void
 }
 
 export const TasksList: FC<TasksListProps> = ({
   tasks,
-  handleDeleteTask
+  handleDeleteTask,
+  handleCompleteTask
 }) => {
   return (
     <article className={styles.tasksList}>
@@ -19,6 +21,7 @@ export const TasksList: FC<TasksListProps> = ({
           task={task}
           key={task.id}
           handleDeleteTask={handleDeleteTask}
+          handleCompleteTask={handleCompleteTask}
         />
       ))}
     </article>

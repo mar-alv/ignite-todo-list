@@ -3,6 +3,8 @@
 .checkbox[type="checkbox"] {
   width: 1rem;
   height: 1rem;
+  margin-right: 0.5rem;
+  
   border-radius: 50%;
   border: 2px solid $blue;
 
@@ -15,11 +17,17 @@
   &:checked {
     border: none;
     background-color: $purple;
+
+    &+label {
+      color: $gray-300;
+      text-decoration: line-through;
+    }
   }
 }
 
 .checkIcon {
   padding: 0.12rem;
+  
   position: absolute;
   pointer-events: none;
 }
