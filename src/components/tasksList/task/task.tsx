@@ -5,18 +5,13 @@ import { Checkbox, DeleteTaskButton } from '@components'
 
 interface TaskProps {
   task: ITask
-  handleDeleteTask: (taskToBeDeletedId: number) => void
-  handleCompleteTask: (taskToBeCompletedId: number) => void
 }
 
-export const Task: FC<TaskProps> = memo(({ task, handleDeleteTask, handleCompleteTask }) => {
+export const Task: FC<TaskProps> = memo(({ task }) => {
   return (
     <div className={styles.task}>
-      <Checkbox task={task} handleCompleteTask={handleCompleteTask} />
-      <DeleteTaskButton
-        taskToBeDeletedId={task.id}
-        handleDeleteTask={handleDeleteTask}
-      />
+      <Checkbox task={task} />
+      <DeleteTaskButton taskToBeDeletedId={task.id} />
     </div>
   )
 })

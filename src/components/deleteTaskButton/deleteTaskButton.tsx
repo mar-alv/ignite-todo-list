@@ -1,18 +1,18 @@
 import { FC } from 'react'
 import { Trash } from 'phosphor-react'
+import { useAppDispatch } from '@store/hook'
+import { deleteTask } from '@store/taskSlice'
 import styles from './deleteTaskButton.module.scss'
 
 interface DeleteTaskButtonProps {
-  taskToBeDeletedId: number
-  handleDeleteTask: (taskToBeDeletedId: number) => void
+  taskToBeDeletedId: string
 }
 
-export const DeleteTaskButton: FC<DeleteTaskButtonProps> = ({
-  handleDeleteTask,
-  taskToBeDeletedId
-}) => {
+export const DeleteTaskButton: FC<DeleteTaskButtonProps> = ({ taskToBeDeletedId }) => {
+  const dispatch = useAppDispatch();
+
   const handleOnClick = () => {
-    handleDeleteTask(taskToBeDeletedId)
+    dispatch(deleteTask(taskToBeDeletedId))
   }
 
   return (

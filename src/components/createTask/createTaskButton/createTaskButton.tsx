@@ -1,19 +1,21 @@
 import { FC } from 'react'
 import { PlusCircle } from 'phosphor-react'
+import { useAppDispatch } from '@store/hook'
+import { createTask } from '@store/taskSlice'
 import styles from './createTaskButton.module.scss'
 
 interface CreateTaskButtonProps {
   content: string
-  createTask: (content: string) => void
 }
 
 export const CreateTaskButton: FC<CreateTaskButtonProps> = ({
-  content,
-  createTask
+  content
 }) => {
+  const dispatch = useAppDispatch();
+
   const handleOnClick = () => {
     if (!!content)
-      createTask(content)
+      dispatch(createTask(content))
   }
 
   return (

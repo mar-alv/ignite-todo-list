@@ -1,19 +1,15 @@
-import { FC, useState } from "react"
 import { Input } from "@components"
+import { FC, useState } from "react"
 import styles from './createTask.module.scss'
 import { CreateTaskButton } from "./createTaskButton/createTaskButton"
 
-interface CreateTaskProps {
-  createTask: (content: string) => void
-}
-
-export const CreateTask: FC<CreateTaskProps> = ({ createTask }) => {
+export const CreateTask: FC = () => {
   const [content, setContent] = useState('')
 
   return (
     <div className={styles.createTask}>
       <Input content={content} setContent={setContent} />
-      <CreateTaskButton content={content} createTask={createTask} />
+      <CreateTaskButton content={content} />
     </div>
   )
 }

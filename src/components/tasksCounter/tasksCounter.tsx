@@ -1,15 +1,12 @@
 import { FC } from 'react'
+import { useAppSelector } from '@store/hook';
 import styles from './tasksCounter.module.scss'
+import { selectTasks, selectTasksDoneCount } from '@store/taskSlice';
 
-interface TasksCounterProps {
-  tasksDoneCount: number
-  totalTasksCount: number
-}
+export const TasksCounter: FC = () => {
+  const totalTasksCount = useAppSelector(selectTasks).length;
+  const tasksDoneCount = useAppSelector(selectTasksDoneCount);
 
-export const TasksCounter: FC<TasksCounterProps> = ({
-  tasksDoneCount,
-  totalTasksCount
-}) => {
   const tasksDoneText = tasksDoneCount !== totalTasksCount ?
     `${tasksDoneCount} de ${totalTasksCount}`
     : tasksDoneCount
