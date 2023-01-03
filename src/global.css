@@ -21,8 +21,3 @@ button {
   line-height: 140%;
   font-family: 'Inter', sans-serif;
 }
-
-:focus {
-  border: 1px solid #5e60ce;
-  outline: transparent;
-}

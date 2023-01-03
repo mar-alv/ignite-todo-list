@@ -13,6 +13,7 @@
   border: none;
   background-color: transparent;
 
+  &:focus,
   &:hover {
     color: $danger;
     border-radius: 5px;

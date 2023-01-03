@@ -19,4 +19,8 @@
   &:hover {
     background-color: $blue;
   }
+
+  &:focus {
+    border-color: $blue;
+  }
 }
