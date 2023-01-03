@@ -9,7 +9,7 @@ export const CreateTask: FC = () => {
   return (
     <div className={styles.createTask}>
       <Input content={content} setContent={setContent} />
-      <CreateTaskButton content={content} />
+      <CreateTaskButton content={content} setContent={setContent} />
     </div>
   )
 }

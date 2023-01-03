@@ -6,16 +6,20 @@ import styles from './createTaskButton.module.scss'
 
 interface CreateTaskButtonProps {
   content: string
+  setContent: (content: string) => void
 }
 
 export const CreateTaskButton: FC<CreateTaskButtonProps> = ({
-  content
+  content,
+  setContent
 }) => {
   const dispatch = useAppDispatch();
 
   const handleOnClick = () => {
-    if (!!content)
+    if (!!content) {
       dispatch(createTask(content))
+      setContent('')
+    }
   }
 
   return (

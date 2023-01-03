@@ -16,8 +16,10 @@ export const Input: FC<InputProps> = ({ content, setContent }) => {
   }
 
   const handleEnterPress = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (!!content && e.key === 'Enter')
+    if (!!content && e.key === 'Enter') {
       dispatch(createTask(content))
+      setContent('')
+    }
   }
 
   return (
