@@ -8,4 +8,13 @@ My implementation of the challenge project "ToDo List" proposed in the ReactJs m
 ## Used Technologies
 - ReactJs with Typescript
 - Vite
-- Redux + SCSS Modules, using both for the first time and even together! 
+- Redux + SCSS Modules, using both for the first time and even together!
+  
+## Video Demonstration
+- https://www.linkedin.com/feed/update/urn:li:activity:7016166450579058688/
+
+## How to run
+- Download the project
+- Paste these commands in a terminal
+  - ```npm install``` or ```npm i``` to install the dependencies
+  - ```npm run dev``` to run the project locally
