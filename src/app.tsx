@@ -1,10 +1,12 @@
 import { defaultTheme } from './styles/themes/default'
 import {
-  Header,
-  /*NoTasks,
-  TasksList,
   CreateTask,
-  TasksCounter*/
+  Header,
+  NoTasks,
+  /*
+  TasksList,
+  TasksCounter
+  */
 } from '@components'
 import { GlobalStyle } from './styles/global'
 import { selectTasks } from '@store/taskSlice';
@@ -21,9 +23,12 @@ export function App() {
         <Header />
 
         <main>
-          {/* <CreateTask />
+          <CreateTask />
+
+          {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
+          {/* 
           <TasksCounter />
-          {isThereAnyTask ? (<TasksList />) : (<NoTasks />)} */}
+          */}
         </main>
       </div>
     </ThemeProvider>
