@@ -6,7 +6,7 @@ export const StyledCheckbox = styled.input`
   margin-right: .5rem;
 
   border-radius: 50%;
-  border: .2rem solid $blue;
+  border: .2rem solid ${(props) => props.theme['blue']};
 
   outline: none;
   cursor: pointer;
