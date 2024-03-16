@@ -1,7 +1,6 @@
-import { FC } from 'react'
-import './logo.module.scss'
 import logo from '@assets/logo.svg'
+import { StyledLogo } from './styles'
 
-export const Logo: FC = () => {
-  return <img src={logo} alt="Logo do ToDo List" />
+export function Logo() {
+  return <StyledLogo src={logo} alt="Logo do ToDo List" />
 }

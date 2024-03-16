@@ -1,11 +1,10 @@
-import { FC } from "react"
 import { Logo } from "@components"
-import styles from './header.module.scss'
+import { StyledHeader } from './styles'
 
-export const Header: FC = () => {
+export function Header() {
   return (
-    <header className={styles.header}>
+    <StyledHeader>
       <Logo />
-    </header>
+    </StyledHeader>
   )
 }

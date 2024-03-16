@@ -1,4 +1,3 @@
-import './global.css'
 import React from 'react'
 import { App } from './app'
 import { store } from '@store/store'

@@ -1,0 +1,16 @@
+#app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+
+  left: 50%;
+  width: 50%;
+  margin-top: 11rem;
+  transform: translate(-50%, 0);
+}
