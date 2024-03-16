@@ -1,8 +1,9 @@
-/*export { Checkbox } from './checkbox/checkbox'
+export { Checkbox } from './checkbox'
+/*
 export { CreateTask } from './createTask/createTask'
 export { DeleteTaskButton } from './deleteTaskButton/deleteTaskButton'
 */
-export { Header } from './header/header'
+export { Header } from './header'
 // export { Input } from './input/input'
 export { Logo } from './logo/logo'
 /*
