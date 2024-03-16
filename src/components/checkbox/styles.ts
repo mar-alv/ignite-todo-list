@@ -31,7 +31,7 @@ export const StyledCheckbox = styled.input`
 
 export const CheckboxIcon = styled.span`
   padding: .12rem;
-
   position: absolute;
+
   pointer-events: none;
 `
