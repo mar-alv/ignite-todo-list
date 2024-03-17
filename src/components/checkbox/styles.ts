@@ -9,17 +9,16 @@ export const StyledCheckbox = styled.div`
 `
 
 export const CheckboxIcon = styled.span`
-  top: 50%;
-  left: 50%;
-  transform: translate(-135%, -50%);
+  top: 0%;
+  left: 10%;
   position: absolute;
 
   pointer-events: none;
 `
 
 export const StyledCheckboxCircle = styled.input`
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
   align-self: start;
 
   border-radius: 50%;

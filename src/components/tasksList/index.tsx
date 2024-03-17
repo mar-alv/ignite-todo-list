@@ -1,10 +1,10 @@
-import { selectTasks } from '@store/taskSlice';
 import { StyledTasksList } from './styles';
 import { Task } from './task'
-import { useAppSelector } from '@store/hook';
+import { TodosContext } from '@contexts';
+import { useContext } from 'react';
 
 export function TasksList() {
-  const tasks = useAppSelector(selectTasks);
+  const { tasks } = useContext(TodosContext)
 
   return (
     <StyledTasksList>

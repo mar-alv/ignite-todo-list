@@ -1,7 +1,7 @@
-import { createTask } from '@store/taskSlice'
 import { PlusCircle } from 'phosphor-react'
 import { StyledCreateTaskButton } from './styles'
-import { useAppDispatch } from '@store/hook'
+import { TodosContext } from '@contexts'
+import { useContext } from 'react'
 
 interface Props {
   content: string
@@ -9,12 +9,12 @@ interface Props {
 }
 
 export function CreateTaskButton({content, setContent}: Props) {
-  const dispatch = useAppDispatch();
+  const { createTask } = useContext(TodosContext)
 
   function handleOnClick(){
     if (!content) return
 
-    dispatch(createTask(content))
+    createTask(content)
     setContent('')
   }
 

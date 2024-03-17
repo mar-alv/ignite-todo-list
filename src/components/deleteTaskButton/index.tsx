@@ -1,17 +1,17 @@
-import { deleteTask } from '@store/taskSlice'
 import { StyledDeleteTaskButton } from './styles'
+import { TodosContext } from '@contexts'
 import { Trash } from 'phosphor-react'
-import { useAppDispatch } from '@store/hook'
+import { useContext } from 'react'
 
 interface Props {
   taskToBeDeletedId: string
 }
 
 export function DeleteTaskButton({ taskToBeDeletedId }: Props) {
-  const dispatch = useAppDispatch();
+  const { deleteTask } = useContext(TodosContext)
 
   function handleOnClick(){
-    dispatch(deleteTask(taskToBeDeletedId))
+    deleteTask(taskToBeDeletedId)
   }
 
   return (

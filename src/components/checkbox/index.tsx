@@ -1,21 +1,21 @@
 import { Check } from 'phosphor-react'
 import { CheckboxIcon, StyledCheckbox, StyledCheckboxCircle } from './styles'
-import { completeTask } from '@store/taskSlice'
 import { ITask } from '@interfaces'
-import { useAppDispatch } from '@store/hook'
-import { useRef, KeyboardEvent, MutableRefObject } from 'react'
+import { useRef, KeyboardEvent, MutableRefObject, useContext } from 'react'
+import { TodosContext } from '@contexts'
 
 interface Props {
   task: ITask
 }
 
 export function Checkbox({ task }: Props) {
-  const dispatch = useAppDispatch();
+  const { toggleTaskDone } = useContext(TodosContext)
+
   const { id, isDone, content } = task
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>
 
   function handleOnChange() {
-    dispatch(completeTask(id))
+    toggleTaskDone(id)
   }
 
   function handleEnterPress(e: KeyboardEvent<HTMLInputElement>) {
@@ -23,7 +23,7 @@ export function Checkbox({ task }: Props) {
 
     inputRef.current.checked = !inputRef.current.checked
 
-    dispatch(completeTask(id))
+    toggleTaskDone(id)
   }
 
   return (
