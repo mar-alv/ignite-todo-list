@@ -16,7 +16,7 @@ export function Input({ content, setContent }: Props) {
   }
 
   function handleEnterPress(e: KeyboardEvent<HTMLInputElement>) {
-    if (!content && e.key !== 'Enter') return
+    if (!content || e.key !== 'Enter') return
 
     dispatch(createTask(content))
     setContent('')

@@ -13,11 +13,15 @@ export const StyledCreateTaskButton = styled.button`
   color: ${(props) => props.theme['gray-100']};
   background-color: ${(props) => props.theme['blue-dark']};
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: ${(props) => props.theme['blue']};
   }
 
-  &:focus {
+  &:not(:disabled):focus {
     border-color: ${(props) => props.theme['blue']};
+  }
+
+  &:disabled {
+    opacity: .7;
   }
 `

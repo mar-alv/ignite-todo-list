@@ -19,7 +19,7 @@ export function CreateTaskButton({content, setContent}: Props) {
   }
 
   return (
-    <StyledCreateTaskButton onClick={handleOnClick}>
+    <StyledCreateTaskButton disabled={!content} onClick={handleOnClick} >
       Criar <PlusCircle size={16} weight='bold' />
     </StyledCreateTaskButton>
   )
