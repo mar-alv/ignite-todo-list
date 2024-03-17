@@ -1,9 +1,13 @@
-import { FC } from 'react'
 import { useAppSelector } from '@store/hook';
-import styles from './tasksCounter.module.scss'
 import { selectTasks, selectTasksDoneCount } from '@store/taskSlice';
+import {
+  Counter,
+  CreatedTasks,
+  StyledTasksCounter,
+  TasksDone
+} from './styles';
 
-export const TasksCounter: FC = () => {
+export function TasksCounter() {
   const totalTasksCount = useAppSelector(selectTasks).length;
   const tasksDoneCount = useAppSelector(selectTasksDoneCount);
 
@@ -12,19 +16,22 @@ export const TasksCounter: FC = () => {
     : tasksDoneCount
 
   return (
-    <header className={styles.tasksCounter}>
-      <span>
+    <StyledTasksCounter>
+      <CreatedTasks>
         Tarefas criadas
-        <span>
+
+        <Counter>
           {totalTasksCount}
-        </span>
-      </span>
-      <span>
+        </Counter>
+      </CreatedTasks>
+
+      <TasksDone>
         Concluídas
-        <span>
+
+        <Counter>
           {tasksDoneText}
-        </span>
-      </span>
-    </header>
+        </Counter>
+      </TasksDone>
+    </StyledTasksCounter>
   )
 }
