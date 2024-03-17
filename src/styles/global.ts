@@ -63,15 +63,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  img,
-  picture,
-  svg,
-  video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
   p {
     max-width: 62ch;
 

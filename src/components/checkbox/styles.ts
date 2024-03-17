@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 export const StyledCheckbox = styled.div`
   gap: 1.2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-self: start;
   position: relative;
 `
@@ -26,9 +27,6 @@ export const StyledCheckboxCircle = styled.input`
 
   outline: none;
   cursor: pointer;
-  appearance: none;
-  vertical-align: middle;
-  -webkit-appearance: none;
 
   &:focus {
     border-color: ${(props) => props.theme['purple']};
