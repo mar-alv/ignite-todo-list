@@ -3,10 +3,8 @@ import {
   CreateTask,
   Header,
   NoTasks,
-  /*
   TasksList,
   TasksCounter
-  */
 } from '@components'
 import { GlobalStyle } from './styles/global'
 import { selectTasks } from '@store/taskSlice';
@@ -26,9 +24,7 @@ export function App() {
           <CreateTask />
 
           {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
-          {/* 
           <TasksCounter />
-          */}
         </main>
       </div>
     </ThemeProvider>
