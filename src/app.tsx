@@ -1,3 +1,4 @@
+import './app.css'
 import { defaultTheme } from './styles/themes/default'
 import {
   CreateTask,
@@ -23,8 +24,9 @@ export function App() {
         <main>
           <CreateTask />
 
-          {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
           <TasksCounter />
+
+          {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
         </main>
       </div>
     </ThemeProvider>

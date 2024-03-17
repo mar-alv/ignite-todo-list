@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledNoTasks = styled.section`
-  margin: 3.25rem 0 4rem;
+  margin-top: 8.8rem;
   display: grid;
   place-items: center;
 `

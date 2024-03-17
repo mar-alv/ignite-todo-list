@@ -1,16 +1,11 @@
 #app {
-  display: flex;
-  position: relative;
-  flex-direction: column;
+  width: 100%;
+  display: grid;
 }
 
 main {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-
-  left: 50%;
-  width: 50%;
-  margin-top: 11rem;
-  transform: translate(-50%, 0);
+  max-width: 64rem;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
 }

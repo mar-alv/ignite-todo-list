@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const StyledCreateTask = styled.div`
-  gap: .5rem;
-  display: flex;
-  justify-content: space-between;
+  margin-top: -2.7rem;
+  gap: .8rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
 `

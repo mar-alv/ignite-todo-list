@@ -1,28 +1,32 @@
 import styled from 'styled-components'
 
 export const StyledTasksCounter = styled.section`
+  margin-top: 6.4rem;
   display: flex;
-  margin: 5.625rem 0 0.75rem;
   justify-content: space-between;
+
+  h3 {
+    gap: .8rem;
+    display: flex;
+    align-items: center;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 `
 
 export const CreatedTasks = styled.h3`
-  font-size: .875rem;
-  font-weight: bold;
   color: ${(props) => props.theme['blue']};
 `
 
 export const TasksDone = styled.h3`
-  font-size: .875rem;
-  font-weight: bold;
   color: ${(props) => props.theme['purple']};
 `
 
 export const Counter = styled.span`
-  font-size: .75rem;
-  margin-left: .5rem;
+  font-size: 1.2rem;
   border-radius: 3rem;
-  padding: .125rem .5rem;
+  padding: .2rem .8rem;
 
   color: ${(props) => props.theme['gray-200']};
   background-color: ${(props) => props.theme['gray-400']};

@@ -1,5 +1,5 @@
 import { Check } from 'phosphor-react'
-import { CheckboxIcon, StyledCheckbox } from './styles'
+import { CheckboxIcon, StyledCheckbox, StyledCheckboxCircle } from './styles'
 import { completeTask } from '@store/taskSlice'
 import { ITask } from '@interfaces'
 import { useAppDispatch } from '@store/hook'
@@ -27,13 +27,13 @@ export function Checkbox({ task }: Props) {
   }
 
   return (
-    <span>
+    <StyledCheckbox>
       {isDone && (
         <CheckboxIcon>
           <Check size={12} />
         </CheckboxIcon>
       )}
-      <StyledCheckbox
+      <StyledCheckboxCircle
         id={`checkbox${id}`}
         onChange={handleOnChange}
         onKeyDown={handleEnterPress}
@@ -43,6 +43,6 @@ export function Checkbox({ task }: Props) {
       <label htmlFor={`checkbox${id}`}>
         {content}
       </label>
-    </span>
+    </StyledCheckbox>
   )
 }

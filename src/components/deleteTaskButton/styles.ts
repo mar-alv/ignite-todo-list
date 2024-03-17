@@ -1,11 +1,8 @@
 import styled from 'styled-components'
 
 export const StyledDeleteTaskButton = styled.button`
-  width: 1.5rem;
-  height: 1.5rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  padding: .5rem;
+  justify-self: end;
 
   border: none;
   color: ${(props) => props.theme['gray-300']};

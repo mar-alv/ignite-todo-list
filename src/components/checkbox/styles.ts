@@ -1,9 +1,25 @@
 import styled from "styled-components"
 
-export const StyledCheckbox = styled.input`
-  width: 1rem;
-  height: 1rem;
-  margin-right: .5rem;
+export const StyledCheckbox = styled.div`
+  gap: 1.2rem;
+  display: flex;
+  align-self: start;
+  position: relative;
+`
+
+export const CheckboxIcon = styled.span`
+  top: 50%;
+  left: 50%;
+  transform: translate(-135%, -50%);
+  position: absolute;
+
+  pointer-events: none;
+`
+
+export const StyledCheckboxCircle = styled.input`
+  width: 1.4rem;
+  height: 1.4rem;
+  align-self: start;
 
   border-radius: 50%;
   border: .2rem solid ${(props) => props.theme['blue']};
@@ -27,11 +43,4 @@ export const StyledCheckbox = styled.input`
       color: ${(props) => props.theme['gray-300']};
     }
   }
-`
-
-export const CheckboxIcon = styled.span`
-  padding: .12rem;
-  position: absolute;
-
-  pointer-events: none;
 `
