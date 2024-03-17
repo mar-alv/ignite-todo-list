@@ -6,6 +6,4 @@ export { Input } from './input'
 export { Logo } from './logo/logo'
 export { NoTasks } from './noTasks'
 export { TasksCounter } from './tasksCounter'
-/*
-export { TasksList } from './tasksList/tasksList'
-*/
+export { TasksList } from './tasksList'
