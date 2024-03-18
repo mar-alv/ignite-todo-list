@@ -9,8 +9,8 @@ export const StyledCheckbox = styled.div`
 `
 
 export const CheckboxIcon = styled.span`
-  top: 0%;
-  left: 10%;
+  top: -2%;
+  left: 5%;
   position: absolute;
 
   pointer-events: none;

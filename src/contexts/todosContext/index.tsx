@@ -1,10 +1,10 @@
 import {
   createContext,
   ReactNode,
-  useState,
+  useReducer
 } from 'react'
 import { ITask } from '@interfaces'
-import { v4 as uuidv4 } from 'uuid';
+import { ActionType, todosReducer } from './reducer';
 
 interface ContextType {
   tasks: ITask[],
@@ -21,37 +21,22 @@ interface Props {
 export const TodosContext = createContext({} as ContextType)
 
 export function TodosProvider({ children }: Props) {
-  const [tasks, setTasks] = useState<ITask[]>([])
+  const [state, dispatch] = useReducer(todosReducer, [])
 
   function getDoneTasksCount() {
-    return tasks.filter(i => i.isDone).length
+    return state.filter(i => i.isDone).length
   }
 
   function createTask(content: string) {
-    const newTask = {
-      id: uuidv4(),
-      isDone: false,
-      content: content
-    } as ITask
-
-    setTasks([...tasks, newTask])
+    dispatch({ type: ActionType.CREATE_TASK, payload: { content } })
   }
 
   function deleteTask(taskId: string) {
-    const updatedTasks = tasks.filter(task => task.id !== taskId)
-
-    setTasks(updatedTasks)
+    dispatch({ type: ActionType.DELETE_TASK, payload: { taskId } })
   }
 
   function toggleTaskDone(taskId: string) {
-    const updatedTasks = [...tasks].map(i => {
-      if (i.id === taskId)
-        i.isDone = !i.isDone
-
-        return i
-    })
-
-    setTasks(updatedTasks)
+    dispatch({ type: ActionType.TOGGLE_TASK_DONE, payload: { taskId } })
   }
 
   return (
@@ -61,7 +46,7 @@ export function TodosProvider({ children }: Props) {
         deleteTask,
         getDoneTasksCount,
         toggleTaskDone,
-        tasks,
+        tasks: state,
       }}
     >
       {children}
