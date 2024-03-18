@@ -1,7 +1,6 @@
-import { createTask } from '@store/taskSlice'
-import { ChangeEvent, KeyboardEvent } from 'react'
+import { ChangeEvent, KeyboardEvent, useContext } from 'react'
 import { StyledInput } from './styles'
-import { useAppDispatch } from '@store/hook'
+import { TodosContext } from '@contexts'
 
 interface Props {
   content: string
@@ -9,7 +8,7 @@ interface Props {
 }
 
 export function Input({ content, setContent }: Props) {
-  const dispatch = useAppDispatch();
+  const { createTask } = useContext(TodosContext)
 
   function handleOnChange(e: ChangeEvent<HTMLInputElement>) {
     setContent(e.target.value)
@@ -18,7 +17,7 @@ export function Input({ content, setContent }: Props) {
   function handleEnterPress(e: KeyboardEvent<HTMLInputElement>) {
     if (!content || e.key !== 'Enter') return
 
-    dispatch(createTask(content))
+    createTask(content)
     setContent('')
   }
 

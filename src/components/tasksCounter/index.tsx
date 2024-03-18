@@ -1,15 +1,17 @@
-import { useAppSelector } from '@store/hook';
-import { selectTasks, selectTasksDoneCount } from '@store/taskSlice';
 import {
   Counter,
   CreatedTasks,
   StyledTasksCounter,
   TasksDone
 } from './styles';
+import { TodosContext } from '@contexts';
+import { useContext } from 'react';
 
 export function TasksCounter() {
-  const totalTasksCount = useAppSelector(selectTasks).length;
-  const tasksDoneCount = useAppSelector(selectTasksDoneCount);
+  const { getDoneTasksCount, tasks } = useContext(TodosContext)
+
+  const totalTasksCount = tasks.length
+  const tasksDoneCount = getDoneTasksCount()
 
   const tasksDoneText = tasksDoneCount !== totalTasksCount ?
     `${tasksDoneCount} de ${totalTasksCount}`

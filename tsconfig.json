@@ -21,17 +21,17 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "paths": {
-      "@components": [
-        "./src/components"
-      ],
-      "@interfaces": [
-        "./src/interfaces"
-      ],
       "@assets/*": [
         "./src/assets/*"
       ],
-      "@store/*": [
-        "./src/store/*"
+      "@components": [
+        "./src/components"
+      ],
+      "@contexts": [
+        "./src/contexts"
+      ],
+      "@interfaces": [
+        "./src/interfaces"
       ]
     }
   },

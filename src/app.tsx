@@ -8,27 +8,29 @@ import {
   TasksCounter
 } from '@components'
 import { GlobalStyle } from './styles/global'
-import { selectTasks } from '@store/taskSlice';
 import { ThemeProvider } from 'styled-components'
-import { useAppSelector } from '@store/hook';
+import { TodosContext, TodosProvider } from '@contexts'
+import { useContext } from 'react'
 
 export function App() {
-  const isThereAnyTask = !!useAppSelector(selectTasks).length;
+  const { tasks } = useContext(TodosContext)
+  const isThereAnyTask = !!tasks.length
 
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
-      <div id='app'>
-        <Header />
 
-        <main>
-          <CreateTask />
+        <div id='app'>
+          <Header />
 
-          <TasksCounter />
+          <main>
+            <CreateTask />
 
-          {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
-        </main>
-      </div>
+            <TasksCounter />
+
+            {isThereAnyTask ? (<TasksList />) : (<NoTasks />)}
+          </main>
+        </div>
     </ThemeProvider>
   )
 }
