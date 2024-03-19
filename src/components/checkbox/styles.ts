@@ -27,6 +27,7 @@ export const StyledCheckboxCircle = styled.input`
   outline: none;
   cursor: pointer;
 
+  &:not(:checked):hover,
   &:focus {
     border-color: ${(props) => props.theme['purple']};
   }
