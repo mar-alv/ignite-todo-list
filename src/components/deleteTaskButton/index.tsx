@@ -15,7 +15,7 @@ export function DeleteTaskButton({ taskToBeDeletedId }: Props) {
   }
 
   return (
-    <StyledDeleteTaskButton onClick={handleOnClick}>
+    <StyledDeleteTaskButton aria-label='Delete task' onClick={handleOnClick}>
       <Trash size={16} weight='bold' />
     </StyledDeleteTaskButton>
   )
