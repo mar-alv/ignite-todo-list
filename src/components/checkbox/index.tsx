@@ -35,6 +35,7 @@ export function Checkbox({ task }: Props) {
       )}
       <StyledCheckboxCircle
         id={`checkbox${id}`}
+        checked={isDone}
         onChange={handleOnChange}
         onKeyDown={handleEnterPress}
         ref={inputRef}

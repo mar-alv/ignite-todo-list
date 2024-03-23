@@ -7,7 +7,7 @@ interface Props {
   task: ITask
 }
 
-export function Component({ task }: Props) {
+function Component({ task }: Props) {
   return (
     <StyledTask>
       <Checkbox task={task} />

@@ -6,6 +6,10 @@ export const StyledCheckbox = styled.div`
   grid-template-columns: auto 1fr;
   align-self: start;
   position: relative;
+
+  label:hover {
+    cursor: pointer;
+  }
 `
 
 export const CheckboxIcon = styled.span`
@@ -27,6 +31,7 @@ export const StyledCheckboxCircle = styled.input`
   outline: none;
   cursor: pointer;
 
+  &:not(:checked):hover,
   &:focus {
     border-color: ${(props) => props.theme['purple']};
   }

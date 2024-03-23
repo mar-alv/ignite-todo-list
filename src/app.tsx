@@ -9,7 +9,7 @@ import {
 } from '@components'
 import { GlobalStyle } from './styles/global'
 import { ThemeProvider } from 'styled-components'
-import { TodosContext, TodosProvider } from '@contexts'
+import { TodosContext } from '@contexts'
 import { useContext } from 'react'
 
 export function App() {
