@@ -1,16 +1,11 @@
-import { ITask } from '@interfaces';
+import { Checkbox } from '@components';
 import type { Meta, StoryObj } from '@storybook/react';
 import { TodosContext } from '@contexts';
-import { TasksList } from '@components';
 import { useArgs } from '@storybook/preview-api';
 
-interface Args {
-  tasks: ITask[];
-}
-
 const meta: Meta = {
-  title: 'Tasks List',
-  component: TasksList,
+  title: 'Checkbox',
+  component: Checkbox,
   parameters: {
     layout: 'centered',
   },
@@ -38,34 +33,34 @@ const meta: Meta = {
           tasks
         }}
       >
-        <TasksList />
+        <Checkbox task={tasks[0]} />
       </TodosContext.Provider>
     )
   }
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const EmptyList: Story = {
-  args: {
-    tasks: [],
-  },
-};
-
-export const FilledList: Story = {
+export const CheckedCheckbox: StoryObj = {
   args: {
     tasks: [
       {
         id: '0',
         content: 'Some task to be done',
-        isDone: false,
-      },
+        isDone: false
+      }
+    ]
+  }
+}
+
+export const UncheckedCheckbox: StoryObj = {
+  args: {
+    tasks: [
       {
         id: '1',
-        content: 'Some task that has been done',
-        isDone: true,
-      },
-    ],
-  },
-};
+        content: 'Some task that has bene done',
+        isDone: true
+      }
+    ]
+  }
+}

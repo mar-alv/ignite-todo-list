@@ -1,5 +1,6 @@
 export { Checkbox } from './checkbox'
 export { CreateTask } from './createTask'
+export { CreateTaskButton } from './createTask/createTaskButton'
 export { DeleteTaskButton } from './deleteTaskButton'
 export { Header } from './header'
 export { Input } from './input'
