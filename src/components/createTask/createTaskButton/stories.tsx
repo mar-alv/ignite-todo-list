@@ -1,6 +1,6 @@
-import { CreateTaskButton } from '@components';
-import type { Meta, StoryObj } from '@storybook/react';
-import { TodosContext } from '@contexts';
+import { CreateTaskButton } from '@components'
+import type { Meta, StoryObj } from '@storybook/react'
+import { TodosContext } from '@contexts'
 
 const meta: Meta = {
   title: 'Create Task Button',
@@ -9,7 +9,7 @@ const meta: Meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  render:({ ...args}) => {
+  render: ({ ...args}) => {
     return (
       <TodosContext.Provider
         value={{
@@ -24,10 +24,10 @@ const meta: Meta = {
       </TodosContext.Provider>
     )
   }
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Disabled: Story = {
   args: {

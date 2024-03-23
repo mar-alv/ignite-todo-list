@@ -4,7 +4,7 @@ import {
   NoTasksImg,
   NoTasksTitle,
   StyledNoTasks
-} from "./styles"
+} from './styles'
 
 export function NoTasks() {
   return (

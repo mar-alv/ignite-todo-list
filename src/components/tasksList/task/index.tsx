@@ -17,4 +17,4 @@ function Component({ task }: Props) {
   )
 }
 
-export const Task = memo(Component);
+export const Task = memo(Component)

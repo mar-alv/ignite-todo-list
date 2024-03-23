@@ -1,12 +1,8 @@
-import { ITask } from '@interfaces';
-import type { Meta, StoryObj } from '@storybook/react';
-import { TodosContext } from '@contexts';
-import { TasksList } from '@components';
-import { useArgs } from '@storybook/preview-api';
-
-interface Args {
-  tasks: ITask[];
-}
+import { ITask } from '@interfaces'
+import type { Meta, StoryObj } from '@storybook/react'
+import { TodosContext } from '@contexts'
+import { TasksList } from '@components'
+import { useArgs } from '@storybook/preview-api'
 
 const meta: Meta = {
   title: 'Tasks List',
@@ -15,18 +11,16 @@ const meta: Meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  render:({ ...args}) => {
-    const [{ tasks }, updateArgs] = useArgs();
+  render: () => {
+    const [{ tasks }, updateArgs] = useArgs()
 
     return (
       <TodosContext.Provider
         value={{
-          createTask: (content: string) => {},
-          deleteTask: (taskId: string) => {},
-          getDoneTasksCount: () => {
-            return 0
-          },
-          toggleTaskDone: (taskId: string) => {
+          createTask(content: string) {},
+          deleteTask(taskId: string) {},
+          getDoneTasksCount: () => 0,
+          toggleTaskDone(taskId: string) {
             updateArgs({ tasks: [...tasks].map(i => {
               if (i.id === taskId) {
                 return { ...i, isDone: !i.isDone }
@@ -42,16 +36,16 @@ const meta: Meta = {
       </TodosContext.Provider>
     )
   }
-};
+}
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const EmptyList: Story = {
   args: {
-    tasks: [],
-  },
-};
+    tasks: []
+  }
+}
 
 export const FilledList: Story = {
   args: {
@@ -65,7 +59,7 @@ export const FilledList: Story = {
         id: '1',
         content: 'Some task that has been done',
         isDone: true,
-      },
-    ],
-  },
-};
+      }
+    ]
+  }
+}

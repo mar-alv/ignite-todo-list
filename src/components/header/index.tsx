@@ -1,4 +1,4 @@
-import { Logo } from "@components"
+import { Logo } from '@components'
 import { StyledHeader } from './styles'
 
 export function Header() {

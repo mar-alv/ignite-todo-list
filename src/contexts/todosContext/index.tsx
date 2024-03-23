@@ -4,14 +4,14 @@ import {
   useReducer
 } from 'react'
 import { ITask } from '@interfaces'
-import { ActionType, todosReducer } from './reducer';
+import { ActionType, todosReducer } from './reducer'
 
 interface ContextType {
-  tasks: ITask[],
-  createTask(content: string): void,
-  deleteTask(taskId: string): void,
-  getDoneTasksCount(): number,
-  toggleTaskDone(taskId: string): void,
+  tasks: ITask[]
+  createTask(content: string): void
+  deleteTask(taskId: string): void
+  getDoneTasksCount(): number
+  toggleTaskDone(taskId: string): void
 }
 
 interface Props {
@@ -46,7 +46,7 @@ export function TodosProvider({ children }: Props) {
         deleteTask,
         getDoneTasksCount,
         toggleTaskDone,
-        tasks: state,
+        tasks: state
       }}
     >
       {children}

@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Task } from '@components';
-import { TodosContext } from '@contexts';
-import { useArgs } from '@storybook/preview-api';
+import type { Meta, StoryObj } from '@storybook/react'
+import { Task } from '@components'
+import { TodosContext } from '@contexts'
+import { useArgs } from '@storybook/preview-api'
 
 const meta = {
   title: 'Task',
@@ -10,18 +10,16 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  render:({ ...args}) => {
-    const [{ task }, updateArgs] = useArgs();
+  render: ({ ...args}) => {
+    const [{ task }, updateArgs] = useArgs()
 
     return (
       <TodosContext.Provider
         value={{
-          createTask: (content: string) => {},
-          deleteTask: (taskId: string) => {},
-          getDoneTasksCount: () => {
-            return 0
-          },
-          toggleTaskDone: (taskId: string) => {
+          createTask(content: string) {},
+          deleteTask(taskId: string) {},
+          getDoneTasksCount: () => 0,
+          toggleTaskDone(taskId: string) {
             updateArgs({ task: { ...task, isDone: !task.isDone } })
           },
           tasks: [args.task],
@@ -31,10 +29,10 @@ const meta = {
       </TodosContext.Provider>
     )
   }
-} satisfies Meta<typeof Task>;
+} satisfies Meta<typeof Task>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const IncompletedTask: Story = {
   args: {

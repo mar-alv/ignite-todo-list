@@ -1,4 +1,4 @@
-import { ITask } from "@interfaces"
+import { ITask } from '@interfaces'
 import { v4 as uuidv4 } from 'uuid'
 
 export enum ActionType {
@@ -14,33 +14,26 @@ export type Action =
 
 export function todosReducer(state: ITask[], action: Action): ITask[] {
   switch (action.type) {
-    case ActionType.CREATE_TASK: {
-      const newTask = {
-        id: uuidv4(),
-        isDone: false,
-        content: action.payload.content
-      }
+    case ActionType.CREATE_TASK:
+      return [ ...state,
+        {
+          id: uuidv4(),
+          isDone: false,
+          content: action.payload.content
+        }
+      ]
 
-      return [ ...state, newTask]
-    }
+    case ActionType.DELETE_TASK:
+      return state.filter(i => i.id !== action.payload.taskId)
 
-    case ActionType.DELETE_TASK: {
-      const updatedTasks = state.filter(i => i.id !== action.payload.taskId)
-
-      return updatedTasks
-    }
-
-    case ActionType.TOGGLE_TASK_DONE: {
-      const updatedTasks = state.map(i => {
+    case ActionType.TOGGLE_TASK_DONE:
+      return state.map(i => {
         if (i.id === action.payload.taskId) {
           return { ...i, isDone: !i.isDone }
         }
 
         return i
       })
-
-      return updatedTasks
-    }
 
     default:
       return state

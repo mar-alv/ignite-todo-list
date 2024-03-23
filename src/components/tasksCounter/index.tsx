@@ -3,9 +3,9 @@ import {
   CreatedTasks,
   StyledTasksCounter,
   TasksDone
-} from './styles';
-import { TodosContext } from '@contexts';
-import { useContext } from 'react';
+} from './styles'
+import { TodosContext } from '@contexts'
+import { useContext } from 'react'
 
 export function TasksCounter() {
   const { getDoneTasksCount, tasks } = useContext(TodosContext)

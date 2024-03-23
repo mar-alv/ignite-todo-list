@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledCreateTaskButton = styled.button`
   padding: 1.6rem;

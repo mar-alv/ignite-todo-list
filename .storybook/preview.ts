@@ -1,8 +1,8 @@
 import { GlobalStyle } from '../src/styles/global'
 import { defaultTheme } from '../src/styles/themes/default'
-import type { Preview } from "@storybook/react";
-import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { ThemeProvider } from 'styled-components';
+import type { Preview } from '@storybook/react'
+import { withThemeFromJSXProvider } from '@storybook/addon-themes'
+import { ThemeProvider } from 'styled-components'
 
 const preview: Preview = {
   parameters: {
@@ -35,6 +35,6 @@ const preview: Preview = {
       }
     })
   ]
-};
+}
 
-export default preview;
+export default preview

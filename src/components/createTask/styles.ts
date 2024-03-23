@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledCreateTask = styled.div`
   margin-top: -2.7rem;

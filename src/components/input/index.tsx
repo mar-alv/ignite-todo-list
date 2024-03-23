@@ -25,7 +25,7 @@ export function Input({ content, setContent }: Props) {
     <StyledInput
       onChange={handleOnChange}
       onKeyDown={handleEnterPress}
-      placeholder="Adicione uma nova tarefa"
+      placeholder='Adicione uma nova tarefa'
       value={content}
     />
   )
