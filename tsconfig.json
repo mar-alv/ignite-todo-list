@@ -35,9 +35,7 @@
       ]
     }
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src", "jest.config.cjs"],
   "references": [
     {
       "path": "./tsconfig.node.json"
