@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { App } from './app'
-import { ITask } from './interfaces/task'
+import { ITask } from '@interfaces'
 import { render, screen } from '@testing-library/react'
 import { TodosContext } from '@contexts'
 
@@ -9,11 +9,11 @@ describe('Task\'s existence tests', () => {
     render(
       <TodosContext.Provider
         value={{
-        createTask(content: string) {},
-        deleteTask(taskId: string) {},
-        getDoneTasksCount: () => 0,
-        toggleTaskDone(taskId: string) {},
-        tasks
+          createTask(content: string) {},
+          deleteTask(taskId: string) {},
+          getDoneTasksCount: () => 0,
+          toggleTaskDone(taskId: string) {},
+          tasks
         }}
       >
         <App />
@@ -27,7 +27,7 @@ describe('Task\'s existence tests', () => {
 
     // act
     const text = screen.getByText('Você ainda não tem tarefas cadastradas')
-  
+
     // assert
     expect(text).toBeInTheDocument()
   })
@@ -39,11 +39,11 @@ describe('Task\'s existence tests', () => {
       content: 'Some task to be done',
       isDone: false
     }])
-  
+
     // act
     const text = screen.getByText('Some task to be done')
-  
+
     // assert
     expect(text).toBeInTheDocument()
-  })  
+  })
 })

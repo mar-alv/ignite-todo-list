@@ -29,13 +29,14 @@ export function Checkbox({ task }: Props) {
   return (
     <StyledCheckbox>
       {isDone && (
-        <CheckboxIcon>
+        <CheckboxIcon role='check-icon'>
           <Check size={12} />
         </CheckboxIcon>
       )}
       <StyledCheckboxCircle
         id={`checkbox${id}`}
         checked={isDone}
+        data-testid={`checkbox${id}`}
         onChange={handleOnChange}
         onKeyDown={handleEnterPress}
         ref={inputRef}
