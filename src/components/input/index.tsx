@@ -23,6 +23,7 @@ export function Input({ content, setContent }: Props) {
 
   return (
     <StyledInput
+      data-testid='input'
       onChange={handleOnChange}
       onKeyDown={handleEnterPress}
       placeholder='Adicione uma nova tarefa'
