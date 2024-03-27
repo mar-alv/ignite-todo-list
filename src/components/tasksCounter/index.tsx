@@ -19,7 +19,7 @@ export function TasksCounter() {
 
   return (
     <StyledTasksCounter>
-      <CreatedTasks>
+      <CreatedTasks data-testid='created-tasks'>
         Tarefas criadas
 
         <Counter>
@@ -27,7 +27,7 @@ export function TasksCounter() {
         </Counter>
       </CreatedTasks>
 
-      <TasksDone>
+      <TasksDone data-testid='done-tasks'>
         Concluídas
 
         <Counter>
