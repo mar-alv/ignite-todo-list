@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react'
 import { TodosContext } from '@contexts'
 import { TasksCounter } from '@components'
 
-describe('TaskCounter tests', () => {
+describe('TaskCounter Tests', () => {
   function renderComponent(tasks: ITask[]) {
     return render(
       <TodosContext.Provider

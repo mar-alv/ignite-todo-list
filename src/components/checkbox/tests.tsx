@@ -4,7 +4,7 @@ import { ITask } from '@interfaces'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { TodosContext } from '@contexts'
 
-describe('Checkbox tests', () => {
+describe('Checkbox Tests', () => {
   const taskDone = {
     id: '0',
     content: 'Some task to be done',
