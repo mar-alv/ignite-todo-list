@@ -32,7 +32,7 @@ export function customRender(children: ReactNode, customValue = {} as CustomValu
     </TodosContext.Provider>
   )
 
-  return rerender
+  return { rerender }
 }
 
 export function customRerender(rerender: (ui: ReactNode) => void, children: ReactNode, customValue = {} as CustomValueProps) {

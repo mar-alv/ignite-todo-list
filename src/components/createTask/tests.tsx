@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom'
 import { App } from '../../app'
+import { customRender, customRerender } from '@tests'
 import { fireEvent, screen } from '@testing-library/react'
-import { customRender, customRerender } from '../../../.tests/test-utils'
 
 describe('Create Task Tests', () => {
   it('should create a task', () => {
     // arrange
-    const rerender = customRender(<App />, { tasks: [] })
+    const { rerender } = customRender(<App />, { tasks: [] })
 
     // act
     const input = screen.getByTestId('input')
@@ -35,31 +35,19 @@ describe('Create Task Tests', () => {
     expect(checkbox).toBeInTheDocument()
   })
 
-  /*it('should\'t create a task if the description is invalid', () => {
+  it('should not create a task if the description is invalid', () => {
     // arrange
-    const { rerender } = renderComponent({ tasks: [] })
+    const { rerender } = customRender(<App />, { tasks: [] })
 
     // act
     const createTaskButton = screen.getByTestId('create-task-button')
     fireEvent.click(createTaskButton)
 
-    rerender(
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: []
-        }}
-      >
-        <App />
-      </TodosContext.Provider>
-    )
+    customRerender(rerender, <App />, { tasks: [] })
 
     const checkbox = screen.queryByText('Some task to be done')
 
     // assert
     expect(checkbox).toBeNull()
-  })*/
+  })
 })

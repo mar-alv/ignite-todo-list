@@ -8,5 +8,6 @@ module.exports = {
 		"\\.(gif|ttf|eot|svg)$": "<rootDir>/.tests/fileMock.js",
     '^@components(.*)': '<rootDir>/src/components$1',
     '^@contexts(.*)': '<rootDir>/src/contexts$1',
+    '^@tests(.*)': '<rootDir>/.tests$1',
 	}
 };
