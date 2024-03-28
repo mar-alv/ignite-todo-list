@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { App } from '../../app'
+import { App } from '../src/app'
 import { customRender, customRerender } from '@tests'
 import { fireEvent, screen } from '@testing-library/react'
 

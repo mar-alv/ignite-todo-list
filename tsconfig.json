@@ -38,7 +38,7 @@
       ]
     }
   },
-  "include": ["src", "./.tests/test-utils.tsx", "jest.config.cjs"],
+  "include": ["src", "./.tests/test-utils.tsx", "jest.config.cjs", "tests/tasks.tests.tsx", "tests/task-counter.tests.tsx", "tests/no-tasks.tests.tsx", "tests/input.tests.tsx", "tests/delete-task.tests.tsx", "tests/create-task.tests.tsx", "tests/checkbox.tests.tsx"],
   "references": [
     {
       "path": "./tsconfig.node.json"
