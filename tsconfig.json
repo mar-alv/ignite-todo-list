@@ -38,7 +38,7 @@
       ]
     }
   },
-  "include": ["src", "./.tests/test-utils.tsx", "jest.config.cjs", "tests/tasks.tests.tsx", "tests/task-counter.tests.tsx", "tests/no-tasks.tests.tsx", "tests/input.tests.tsx", "tests/delete-task.tests.tsx", "tests/create-task.tests.tsx", "tests/checkbox.tests.tsx"],
+  "include": ["src", "./.tests/test-utils.tsx", "jest.config.cjs", "tests/tasks.tests.tsx", "tests/task-counter.tests.tsx", "tests/no-tasks.tests.tsx", "tests/input.tests.tsx", "tests/delete-task.tests.tsx", "tests/create-task.tests.tsx", "tests/checkbox.tests.tsx", "stories/components/task.stories.tsx", "stories/components/tasks-counter.stories.tsx", "stories/components/no-tasks.stories.tsx", "stories/components/logo.stories.tsx", "stories/components/input.stories.tsx", "stories/components/header.stories.tsx", "stories/components/delete-task-button.stories.tsx", "stories/components/create-task.stories.tsx", "stories/components/create-task-button.stories.tsx", "stories/components/checkbox.stories.tsx", "stories/components/tasks-list.stories.tsx"],
   "references": [
     {
       "path": "./tsconfig.node.json"
