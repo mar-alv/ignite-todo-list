@@ -1,8 +1,7 @@
 import '@testing-library/jest-dom'
 import { Checkbox } from '@components'
-import { ITask } from '@interfaces'
-import { fireEvent, render, screen } from '@testing-library/react'
-import { TodosContext } from '@contexts'
+import { customRender, customRerender } from '@tests'
+import { fireEvent, screen } from '@testing-library/react'
 
 describe('Checkbox Tests', () => {
   const taskDone = {
@@ -17,25 +16,9 @@ describe('Checkbox Tests', () => {
     isDone: false
   }
 
-  function renderComponent(task: ITask) {
-    return render(
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: [task]
-        }}
-      >
-        <Checkbox task={task} />
-      </TodosContext.Provider>
-    )
-  }
-
   it('should show the check icon if the task is done', () => {
     // arrange
-    renderComponent(taskDone)
+    customRender(<Checkbox task={taskDone} />, { tasks: [taskDone] })
 
     // act
     const checkIcon = screen.queryByRole('check-icon')
@@ -46,7 +29,7 @@ describe('Checkbox Tests', () => {
 
   it('should not show the check icon if the task is not done', () => {
     // arrange
-    renderComponent(taskNotDone)
+    customRender(<Checkbox task={taskNotDone} />, { tasks: [taskNotDone] })
 
     // act
     const checkIcon = screen.queryByRole('check-icon')
@@ -57,14 +40,16 @@ describe('Checkbox Tests', () => {
 
   it('should toggle the task as done when clicking on its label', () => {
     // arrange
-    const { rerender } = renderComponent(taskNotDone)
+    const { rerender } = customRender(<Checkbox task={taskNotDone} />, { tasks: [taskNotDone] })
 
     // act
     const checkbox = screen.getByText('Some task to be done')
 
     fireEvent.click(checkbox)
 
-    rerender(<Checkbox task={taskDone} />)
+    customRerender(rerender, <Checkbox task={taskDone} />, {
+      tasks: [taskDone]
+    })
 
     const checkIcon = screen.queryByRole('check-icon')
   
@@ -74,14 +59,16 @@ describe('Checkbox Tests', () => {
 
   it('should toggle the task as not done when clicking on its label', () => {
     // arrange
-    const { rerender } = renderComponent(taskDone)
+    const { rerender } = customRender(<Checkbox task={taskDone} />, { tasks: [taskDone] })
 
     // act
     const checkbox = screen.getByText('Some task to be done')
 
     fireEvent.click(checkbox)
 
-    rerender(<Checkbox task={taskNotDone} />)
+    customRerender(rerender, <Checkbox task={taskNotDone} />, {
+      tasks: [taskNotDone]
+    })
 
     const checkIcon = screen.queryByRole('check-icon')
 
@@ -91,7 +78,7 @@ describe('Checkbox Tests', () => {
 
   it('should toggle the task as done when clicking on enter by having its checkbox focused', () => {
     // arrange
-    const { rerender } = renderComponent(taskNotDone)
+    const { rerender } = customRender(<Checkbox task={taskNotDone} />, { tasks: [taskNotDone] })
 
     // act
     const checkbox = screen.getByTestId('checkbox0')
@@ -101,7 +88,9 @@ describe('Checkbox Tests', () => {
       keyCode: 13
     })
 
-    rerender(<Checkbox task={taskDone} />)
+    customRerender(rerender, <Checkbox task={taskDone} />, {
+      tasks: [taskDone]
+    })
 
     const checkIcon = screen.queryByRole('check-icon')
 
@@ -111,7 +100,7 @@ describe('Checkbox Tests', () => {
 
   it('should toggle the task as not done when clicking on enter by having its checkbox focused', () => {
     // arrange
-    const { rerender } = renderComponent(taskDone)
+    const { rerender } = customRender(<Checkbox task={taskDone} />, { tasks: [taskDone] })
 
     // act
     const checkbox = screen.getByTestId('checkbox0')
@@ -121,7 +110,9 @@ describe('Checkbox Tests', () => {
       keyCode: 13
     })
 
-    rerender(<Checkbox task={taskNotDone} />)
+    customRerender(rerender, <Checkbox task={taskNotDone} />, {
+      tasks: [taskNotDone]
+    })
 
     const checkIcon = screen.queryByRole('check-icon')
 

@@ -1,29 +1,12 @@
 import '@testing-library/jest-dom'
 import { App } from '../../app'
-import { ITask } from '@interfaces'
-import { render, screen } from '@testing-library/react'
-import { TodosContext } from '@contexts'
+import { customRender } from '@tests'
+import { screen } from '@testing-library/react'
 
 describe('No Task Tests', () => {
-  function renderComponent(tasks: ITask[]) {
-    return render(
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks
-        }}
-      >
-        <App />
-      </TodosContext.Provider>
-    )
-  }
-
-  it('shouldn\'t render any task if there aren\'t tasks', () => {
+  it('shouldn not render any task if there are not tasks', () => {
     // arrange
-    renderComponent([])
+    customRender(<App />)
 
     // act
     const text = screen.getByText('Você ainda não tem tarefas cadastradas')

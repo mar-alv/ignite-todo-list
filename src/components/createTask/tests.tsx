@@ -6,7 +6,7 @@ import { fireEvent, screen } from '@testing-library/react'
 describe('Create Task Tests', () => {
   it('should create a task', () => {
     // arrange
-    const { rerender } = customRender(<App />, { tasks: [] })
+    const { rerender } = customRender(<App />)
 
     // act
     const input = screen.getByTestId('input')
@@ -37,13 +37,13 @@ describe('Create Task Tests', () => {
 
   it('should not create a task if the description is invalid', () => {
     // arrange
-    const { rerender } = customRender(<App />, { tasks: [] })
+    const { rerender } = customRender(<App />)
 
     // act
     const createTaskButton = screen.getByTestId('create-task-button')
     fireEvent.click(createTaskButton)
 
-    customRerender(rerender, <App />, { tasks: [] })
+    customRerender(rerender, <App />)
 
     const checkbox = screen.queryByText('Some task to be done')
 
