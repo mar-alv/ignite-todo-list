@@ -32,13 +32,10 @@
       ],
       "@interfaces": [
         "./src/interfaces"
-      ],
-      "@tests": [
-        "./.tests"
       ]
     }
   },
-  "include": ["src", "./.tests/test-utils.tsx", "jest.config.cjs", "tests/*.tests.tsx", "stories/components/*.stories.tsx"],
+  "include": ["src", "tests/test-utils.tsx", "jest.config.cjs", "tests/*.tests.tsx", "stories/components/*.stories.tsx"],
   "references": [
     {
       "path": "./tsconfig.node.json"

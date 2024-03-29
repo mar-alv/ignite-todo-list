@@ -1,11 +1,11 @@
-import { defaultTheme } from '../src/styles/themes/default'
-import { Meta, ColorPalette, ColorItem } from '@storybook/blocks'
+import { defaultTheme } from "../src/styles/themes/default"
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks"
 
-<Meta title='Colors' />
+<Meta title="Colors" />
 
 <ColorPalette>
   {Object.entries(defaultTheme).reduce((acc, [name, color]) => {
-    const prefix = name.split('-')[0]
+    const prefix = name.split("-")[0]
 
     const existingGroup = acc.find(group => group.prefix === prefix)
 

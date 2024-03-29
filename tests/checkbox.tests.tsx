@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { Checkbox } from '@components'
-import { customRender, customRerender } from '@tests'
+import { customRender, customRerender } from './test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 
 describe('Checkbox Tests', () => {

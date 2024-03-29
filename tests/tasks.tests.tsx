@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { App } from '../src/app'
-import { customRender } from '@tests'
+import { customRender } from './test-utils'
 import { screen } from '@testing-library/react'
 
 describe('Tasks List Tests', () => {

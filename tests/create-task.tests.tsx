@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import { App } from '../src/app'
-import { customRender, customRerender } from '@tests'
+import { customRender, customRerender } from './test-utils'
 import { fireEvent, screen } from '@testing-library/react'
 
 describe('Create Task Tests', () => {

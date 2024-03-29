@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom'
-import { customRender } from '@tests'
+import { customRender } from './test-utils'
 import { screen } from '@testing-library/react'
 import { TasksCounter } from '@components'
 
