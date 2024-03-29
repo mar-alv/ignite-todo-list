@@ -1,6 +1,5 @@
-import { ITask } from '@interfaces'
+import { customRender } from '../stories-utils'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 import { TasksList } from '@components'
 import { useArgs } from '@storybook/preview-api'
 
@@ -14,27 +13,17 @@ const meta: Meta = {
   render: () => {
     const [{ tasks }, updateArgs] = useArgs()
 
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {
-            updateArgs({ tasks: [...tasks].map(i => {
-              if (i.id === taskId) {
-                return { ...i, isDone: !i.isDone }
-              }
-      
-              return i
-            })})
-          },
-          tasks
-        }}
-      >
-        <TasksList />
-      </TodosContext.Provider>
-    )
+    return customRender(<TasksList />, {
+      deleteTask(taskId: string) {
+        updateArgs({ tasks: [...tasks].filter(i => i.id !== taskId) })
+      },
+      toggleTaskDone(taskId: string) {
+        updateArgs({ tasks: [...tasks].map(i => {
+          return i.id === taskId ? { ...i, isDone: !i.isDone } : i
+        })})
+      },
+      tasks
+    })
   }
 }
 

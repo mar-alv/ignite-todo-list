@@ -1,6 +1,6 @@
 import { CreateTaskButton } from '@components'
+import { customRender } from '../stories-utils'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 
 const meta: Meta = {
   title: 'Create Task Button',
@@ -10,19 +10,7 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   render: ({ ...args}) => {
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: []
-        }}
-      >
-        <CreateTaskButton content={args.content} setContent={args.setContent} />
-      </TodosContext.Provider>
-    )
+    return customRender(<CreateTaskButton content={args.content} setContent={args.setContent} />)
   }
 }
 

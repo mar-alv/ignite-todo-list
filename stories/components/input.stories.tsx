@@ -1,6 +1,6 @@
+import { customRender } from '../stories-utils'
 import { Input } from '@components'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 import { useArgs, } from '@storybook/preview-api'
 
 const meta: Meta = {
@@ -17,21 +17,9 @@ const meta: Meta = {
       updateArgs({ content: value })
     }
 
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: []
-        }}
-      >
-        <Input content={content} setContent={setContent} />
-      </TodosContext.Provider>
-    )
+    return customRender(<Input content={content} setContent={setContent} />)
   }
-}
+} satisfies Meta<typeof Input>
 
 export default meta
 type Story = StoryObj<typeof meta>

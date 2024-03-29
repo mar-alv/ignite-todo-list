@@ -1,6 +1,6 @@
 import { CreateTask } from '@components'
+import { customRender } from '../stories-utils'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 
 const meta: Meta = {
   title: 'Create Task',
@@ -9,22 +9,8 @@ const meta: Meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  render: () => {
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: []
-        }}
-      >
-        <CreateTask />
-      </TodosContext.Provider>
-    )
-  }
-}
+  render: () => customRender(<CreateTask />)
+} satisfies Meta<typeof CreateTask>
 
 export default meta
 type Story = StoryObj<typeof meta>

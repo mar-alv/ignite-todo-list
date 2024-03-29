@@ -8,6 +8,8 @@ interface Props {
 }
 
 function Component({ task }: Props) {
+  if (!task) return <></>
+
   return (
     <StyledTask>
       <Checkbox task={task} />

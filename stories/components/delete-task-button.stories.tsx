@@ -1,6 +1,6 @@
+import { customRender } from '../stories-utils'
 import { DeleteTaskButton } from '@components'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 
 const meta: Meta = {
   title: 'Delete Task Button',
@@ -10,19 +10,7 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   render: ({ ...args}) => {
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {},
-          tasks: []
-        }}
-      >
-        <DeleteTaskButton taskToBeDeletedId={args.taskToBeDeletedId} />
-      </TodosContext.Provider>
-    )
+    return customRender(<DeleteTaskButton taskToBeDeletedId={args.taskToBeDeletedId} />)
   }
 }
 

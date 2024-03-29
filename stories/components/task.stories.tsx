@@ -1,6 +1,6 @@
+import { customRender } from '../stories-utils'
 import type { Meta, StoryObj } from '@storybook/react'
 import { Task } from '@components'
-import { TodosContext } from '@contexts'
 import { useArgs } from '@storybook/preview-api'
 
 const meta = {
@@ -10,46 +10,45 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  render: ({ ...args}) => {
-    const [{ task }, updateArgs] = useArgs()
+  render: () => {
+    const [{ tasks }, updateArgs] = useArgs()
 
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => 0,
-          toggleTaskDone(taskId: string) {
-            updateArgs({ task: { ...task, isDone: !task.isDone } })
-          },
-          tasks: [args.task],
-        }}
-      >
-        <Task task={task} />
-      </TodosContext.Provider>
-    )
+    return customRender(<Task task={tasks[0]} />, {
+      deleteTask(taskId: string) {
+        updateArgs({ tasks: [...tasks].filter(i => i.id !== taskId) })
+      },
+      toggleTaskDone(taskId: string) {
+        updateArgs({ tasks: [...tasks].map(i => {
+          return i.id === taskId ? { ...i, isDone: !i.isDone } : i
+        })})
+      },
+      tasks
+    })
   }
 } satisfies Meta<typeof Task>
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const IncompletedTask: Story = {
+export const IncompletedTask: StoryObj = {
   args: {
-    task: {
-      id: '0',
-      content: 'Some task to be done',
-      isDone: false
-    }
+    tasks: [
+      {
+        id: '0',
+        content: 'Some task to be done',
+        isDone: false
+      }
+    ]
   }
 }
 
-export const CompletedTask: Story = {
+export const CompletedTask: StoryObj = {
   args: {
-    task: {
-      id: '1',
-      content: 'Some task that has been done',
-      isDone: true
-    }
+    tasks: [
+      {
+        id: '1',
+        content: 'Some task that has been done',
+        isDone: true
+      }
+    ]
   }
 }

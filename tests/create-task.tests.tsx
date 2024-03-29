@@ -14,7 +14,7 @@ describe('Create Task Tests', () => {
       target: {
         value: 'Some task to be done'
       }
-    });
+    })
 
     const createTaskButton = screen.getByTestId('create-task-button')
     fireEvent.click(createTaskButton)

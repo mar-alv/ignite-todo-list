@@ -24,7 +24,7 @@ describe('Input Tests', () => {
       target: {
         value: 'Some task to be done'
       }
-    });
+    })
 
     fireEvent.keyDown(input, {
       key: 'Enter',

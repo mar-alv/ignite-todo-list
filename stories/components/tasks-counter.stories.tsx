@@ -1,6 +1,6 @@
+import { customRender } from '../stories-utils'
 import { TasksCounter } from '@components'
 import type { Meta, StoryObj } from '@storybook/react'
-import { TodosContext } from '@contexts'
 
 const meta: Meta = {
   title: 'Tasks Counter',
@@ -10,19 +10,10 @@ const meta: Meta = {
   },
   tags: ['autodocs'],
   render: ({ ...args}) => {
-    return (
-      <TodosContext.Provider
-        value={{
-          createTask(content: string) {},
-          deleteTask(taskId: string) {},
-          getDoneTasksCount: () => args.doneTasksCount,
-          toggleTaskDone(taskId: string) {},
-          tasks: args.tasks
-        }}
-      >
-        <TasksCounter />
-      </TodosContext.Provider>
-    )
+    return customRender(<TasksCounter />, {
+      getDoneTasksCount: () => args.doneTasksCount,
+      tasks: args.tasks
+    })
   }
 }
 
