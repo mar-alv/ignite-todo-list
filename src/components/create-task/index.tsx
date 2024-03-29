@@ -1,4 +1,4 @@
-import { CreateTaskButton } from './createTaskButton'
+import { CreateTaskButton } from './create-task-button'
 import { Input } from '@components'
 import { useState } from 'react'
 import { StyledCreateTask } from './styles'
