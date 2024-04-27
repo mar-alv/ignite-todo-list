@@ -111,7 +111,7 @@ It implements the following functionalities, which will be demonstrated in photo
 ##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
 Paste the 1º command into a terminal open within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
 ```sh
-git clone https://github.com/mar-alv/REPO.git
+git clone https://github.com/mar-alv/ignite-todo-list.git
 npm i # Or npm install
 ```
 
@@ -173,12 +173,14 @@ npm run storybook
 
 ### Front-end Framework
 [![React.js](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 ### Styling
 [![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
 [![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 
 ### Testing
+[![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro)
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
 ## 📸 Screenshots and 🎥 Recordings
