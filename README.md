@@ -8,9 +8,85 @@
 
   [🎨 Design](https://www.figma.com/file/HV7C6SQl1SyA1mN8Xur2bv/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=MDvKh9d18LPYlRNA-0)
 
-  [🇧🇷 Português](#pt-br) / [🇬🇧 English](#en)
+  [🇬🇧 English](#en) / [🇧🇷 Português](#pt-br)
 
 </div>
+
+## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
+
+### 📚 Summary
+- [❕ About](#en-about)
+- [📖 Instructions](#en-instructions)
+  - [📥 Install](#en-install)
+  - [🚀 Run Locally](#en-locally)
+  - [📋 Run Unit Tests](#en-unit-tests)
+  - [📔 Run Storybook](#en-storybook)
+- [📂 Structure](#en-structure)
+
+#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
+This is my implementation of the challenge project "ToDo List" from the first ReactJS module of [Ignite](https://www.rocketseat.com.br/ignite), an intermediate and advanced course in various programming languages and technologies offered by [Rocketseat](https://www.rocketseat.com.br/).
+
+It implements the following functionalities, which will be demonstrated in photos and videos later on:
+- **Task Creation:** Describe in the text field and press Enter or click the adjacent button to create the task with the specified description.
+- **Task Deletion:** Click on the trash can icon of the task to delete it.
+- **Complete Tasks:** Check the box next to the text or click on it to mark the task as done.
+
+#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
+Paste the 1º command into a terminal open within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
+```sh
+git clone https://github.com/mar-alv/ignite-todo-list.git
+npm i # Or npm install
+```
+
+##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
+```sh
+npm run dev
+```
+
+##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
+Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
+```sh
+npm run tests
+```
+
+##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
+Paste the command into a terminal, the project's components documentation will be accessible through this [link](http://localhost:6006)
+```sh
+npm run storybook
+```
+
+#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
+```
+│ .storybook/
+│   └── ... files to keep Storybook working
+│ .tests/
+│   └── ... files to keep tests working
+│ src/
+│   ├── assets/
+│   │     └── ... svgs used
+│   ├── components/
+│   │     ├── componente x/
+│   │     │     ├── index.tsx
+│   │     │     └── styles.ts
+│   │     └── ...
+│   ├── contexts/
+│   │     └── ... contexts and providers
+│   ├── styles/
+│   │     └── ... global styles and default theme
+│   ├── interfaces/
+│   │     └── ... interfaces used
+│   └── ...
+│ stories/
+│   ├── components/
+│   │     └── ... stories of the components
+│   ├── ... generic stories (color, icons e typography)
+│   └── ... stories-utils.tsx // util functions for stories
+│ tests/
+│   ├── ... unit tests
+│   └── ... tests-utils.tsx // util functions for tests
+```
 
 ## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
 
@@ -88,81 +164,6 @@ npm run storybook
 │   └── ... tests-utils.tsx // funções utilitárias pros testes
 ```
 
-## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
-
-### 📚 Summary
-- [❕ About](#en-about)
-- [📖 Instructions](#en-instructions)
-  - [📥 Install](#en-install)
-  - [🚀 Run Locally](#en-locally)
-  - [📋 Run Unit Tests](#en-unit-tests)
-  - [📔 Run Storybook](#en-storybook)
-- [📂 Structure](#en-structure)
-
-#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
-This is my implementation of the challenge project "ToDo List" from the first ReactJS module of [Ignite](https://www.rocketseat.com.br/ignite), an intermediate and advanced course in various programming languages and technologies offered by [Rocketseat](https://www.rocketseat.com.br/).
-
-It implements the following functionalities, which will be demonstrated in photos and videos later on:
-- **Task Creation:** Describe in the text field and press Enter or click the adjacent button to create the task with the specified description.
-- **Task Deletion:** Click on the trash can icon of the task to delete it.
-- **Complete Tasks:** Check the box next to the text or click on it to mark the task as done.
-
-#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
-##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
-Paste the 1º command into a terminal open within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
-```sh
-git clone https://github.com/mar-alv/ignite-todo-list.git
-npm i # Or npm install
-```
-
-##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
-Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
-```sh
-npm run dev
-```
-
-##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
-Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
-```sh
-npm run tests
-```
-
-##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
-Paste the command into a terminal, the project's components documentation will be accessible through this [link](http://localhost:6006)
-```sh
-npm run storybook
-```
-
-#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
-```
-│ .storybook/
-│   └── ... files to keep Storybook working
-│ .tests/
-│   └── ... files to keep tests working
-│ src/
-│   ├── assets/
-│   │     └── ... svgs used
-│   ├── components/
-│   │     ├── componente x/
-│   │     │     ├── index.tsx
-│   │     │     └── styles.ts
-│   │     └── ...
-│   ├── contexts/
-│   │     └── ... contexts and providers
-│   ├── styles/
-│   │     └── ... global styles and default theme
-│   ├── interfaces/
-│   │     └── ... interfaces used
-│   └── ...
-│ stories/
-│   ├── components/
-│   │     └── ... stories of the components
-│   ├── ... generic stories (color, icons e typography)
-│   └── ... stories-utils.tsx // util functions for stories
-│ tests/
-│   ├── ... unit tests
-│   └── ... tests-utils.tsx // util functions for tests
-```
 
 ## 🧰 Technologies
 ### Build Tools
