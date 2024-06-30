@@ -40,7 +40,7 @@ npm i # Or npm install
 ```
 
 ##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
-Paste the command into a terminal, the application will be accessable through this <a href='http://localhost:5173' target='_blank'>link</a>
+Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
 
 ```sh
 npm run dev
