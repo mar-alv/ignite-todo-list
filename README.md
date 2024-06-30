@@ -117,7 +117,7 @@ npm i # Ou npm install
 ```
 
 ##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
-Cole o comando em um terminal, a aplicação estará acessível através desse link: http://localhost:5173 
+Cole o comando em um terminal, a aplicação estará acessível através desse [link](http://localhost:5173)
 ```sh
 npm run dev
 ```
