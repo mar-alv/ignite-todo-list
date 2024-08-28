@@ -8,22 +8,24 @@
 
   [🎨 Design](https://www.figma.com/file/HV7C6SQl1SyA1mN8Xur2bv/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=MDvKh9d18LPYlRNA-0)
 
-  [🇬🇧 English](#en) / [🇧🇷 Português](#pt-br)
+  [🇵🇹 Português](./docs/README-pt.md)
 
 </div>
 
-## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
+## 📚 Summary
+- [❕ About](#about)
+- [📖 Instructions](#instructions)
+  - [📥 Install](#install)
+  - [🚀 Run Locally](#locally)
+  - [📋 Run Unit Tests](#unit-tests)
+  - [📔 Run Storybook](#storybook)
+- [📂 Structure](#structure)
+- [🧰 Technologies](#technologies)
+- [📸 Screenshots and 🎥 Recordings](#screenshots-prints)
+- [👤 Author](#author)
+- [📄 License](#license)
 
-### 📚 Summary
-- [❕ About](#en-about)
-- [📖 Instructions](#en-instructions)
-  - [📥 Install](#en-install)
-  - [🚀 Run Locally](#en-locally)
-  - [📋 Run Unit Tests](#en-unit-tests)
-  - [📔 Run Storybook](#en-storybook)
-- [📂 Structure](#en-structure)
-
-#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
+### <a id='about' style='text-decoration: none; color: inherit;'>❕ About</a>
 This is my implementation of the challenge project "ToDo List" from the first ReactJS module of [Ignite](https://www.rocketseat.com.br/ignite), an intermediate and advanced course in various programming languages and technologies offered by [Rocketseat](https://www.rocketseat.com.br/).
 
 It implements the following functionalities, which will be demonstrated in photos and videos later on:
@@ -31,8 +33,8 @@ It implements the following functionalities, which will be demonstrated in photo
 - **Task Deletion:** Click on the trash can icon of the task to delete it.
 - **Complete Tasks:** Check the box next to the text or click on it to mark the task as done.
 
-#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
-##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
+### <a id='instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+#### <a id='instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
 Paste the 1º command into a terminal open within a folder of your preference to clone the project
 ```sh
 git clone https://github.com/mar-alv/ignite-todo-list.git
@@ -46,162 +48,76 @@ npm i
 npm install
 ```
 
-##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+#### <a id='locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
 Paste the command into a terminal, the application will be accessable through this [link](http://localhost:5173)
 
 ```sh
 npm run dev
 ```
 
-##### <a id='en-unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
+#### <a id='unit-tests' style='text-decoration: none; color: inherit;'>📋 Run Unit Tests</a>
 Paste the command into a terminal, they will be exectued one after the other mentioning if there were failed tests
 ```sh
 npm run tests
 ```
 
-##### <a id='en-storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
+#### <a id='storybook' style='text-decoration: none; color: inherit;'>📔 Run Storybook</a>
 Paste the command into a terminal, the project's components documentation will be accessible through this [link](http://localhost:6006)
 ```sh
 npm run storybook
 ```
 
-#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
+### <a id='structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
 ```
 │ .storybook/
-│   └── ... files to keep Storybook working
+│   └── ...
 │ .tests/
-│   └── ... files to keep tests working
+│   └── ...
+│ docs/
+│   └── ...
 │ src/
 │   ├── assets/
-│   │     └── ... svgs used
+│   │     └── ...
 │   ├── components/
 │   │     ├── componente x/
-│   │     │     ├── index.tsx
-│   │     │     └── styles.ts
+│   │     │     └── ...
 │   │     └── ...
 │   ├── contexts/
-│   │     └── ... contexts and providers
+│   │     └── ...
 │   ├── styles/
-│   │     └── ... global styles and default theme
+│   │     └── ...
 │   ├── interfaces/
-│   │     └── ... interfaces used
+│   │     └── ...
 │   └── ...
 │ stories/
 │   ├── components/
-│   │     └── ... stories of the components
-│   ├── ... generic stories (color, icons e typography)
-│   └── ... stories-utils.tsx // util functions for stories
-│ tests/
-│   ├── ... unit tests
-│   └── ... tests-utils.tsx // util functions for tests
-```
-
-## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
-
-### 📚 Sumário
-- [❕ Sobre](#pt-br-sobre)
-- [📖 Instruções](#pt-br-instrucoes)
-  - [📥 Instalar](#pt-br-instalar)
-  - [🚀 Rodar Localmente](#pt-br-localmente)
-  - [📋 Rodar Testes Unitários](#pt-br-testes-unitarios)
-  - [📔 Rodar Storybook](#pt-br-storybook)
-- [📂 Estrutura](#pt-br-estrutura)
-
-#### <a id='pt-br-sobre' style='text-decoration: none; color: inherit;'>❕ Sobre</a>
-Esta é a minha implementação do desafio "ToDo List" do primeiro módulo de ReactJS do [Ignite](https://www.rocketseat.com.br/ignite), um curso intermediário e avançado de diversas linguagens de programação e tecnologias oferecido pela [Rocketseat](https://www.rocketseat.com.br/).
-
-Nela, foram implementadas as seguintes funcionalidades, que serão demonstradas em fotos e vídeos mais adiante:
-- **Criação de tarefas:** Descreva no campo de texto e pressione Enter ou clique no botão ao lado para criar a tarefa com a descrição especificada.
-- **Deleção de tarefas:** Clique no ícone de lixeira da tarefa para deletá-la.
-- **Completar tarefas:** Marque a caixa ao lado do texto ou clique nela para marcar a tarefa como concluída.
-
-#### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
-##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
-Cole o 1º comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
-```sh
-git clone https://github.com/mar-alv/ignite-todo-list.git
-```
-
-Em seguida rode uma das versões do 2º comando para instalar as dependências
-```sh
-npm i
-```
-```sh
-npm install
-```
-
-##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
-Cole o comando em um terminal, a aplicação estará acessível através desse [link](http://localhost:5173)
-```sh
-npm run dev
-```
-
-##### <a id='pt-br-testes-unitarios' style='text-decoration: none; color: inherit;'>📋 Rodar Testes Unitários</a>
-Cole o comando em um terminal, eles serão executados um atrás do outro apontando se houve testes falhos
-```sh
-npm run tests
-```
-
-##### <a id='pt-br-storybook' style='text-decoration: none; color: inherit;'>📔 Rodar Storybook</a>
-Cole o comando num terminal, a documentação dos componentes do projeto estará acessível através desse [link](http://localhost:6006)
-```sh
-npm run storybook
-```
-
-#### <a id='pt-br-estrutura' style='text-decoration: none; color: inherit;'>📂 Estrutura</a>
-```
-│ .storybook/
-│   └── ... arquivos que mantém o funcionamento do Storybook
-│ .tests/
-│   └── ... arquivos que mantém o funcionamento dos testes
-│ src/
-│   ├── assets/
-│   │     └── ... svgs usados
-│   ├── components/
-│   │     ├── componente x/
-│   │     │     ├── index.tsx
-│   │     │     └── styles.ts
 │   │     └── ...
-│   ├── contexts/
-│   │     └── ... contextos e providers
-│   ├── styles/
-│   │     └── ... estilos globais e default
-│   ├── interfaces/
-│   │     └── ... interfaces usadas
 │   └── ...
-│ stories/
-│   ├── components/
-│   │     └── ... stories dos componentes
-│   ├── ... stories genéricos(cor, ícones e tipografia)
-│   └── ... stories-utils.tsx // funções utilitárias pros stories
 │ tests/
-│   ├── ... testes unitários
-│   └── ... tests-utils.tsx // funções utilitárias pros testes
+│   └── ...
 ```
 
-
-## 🧰 Technologies
-### Build Tools
+### <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Technologies</a>
+#### Build Tools
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 
-### Documentation
+#### Documentation
 [![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org/)
 
-### Front-end Framework
+#### Front-end Framework
 [![React.js](https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-### Styling
+#### Styling
 [![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
 [![Styled-Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)](https://styled-components.com/)
 
-### Testing
+#### Testing
 [![React Testing Library](https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)](https://testing-library.com/docs/react-testing-library/intro)
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
-## 📸 Screenshots and 🎥 Recordings
-For a longer video demonstration click here and like my post on
-<a href='https://www.linkedin.com/feed/update/urn:li:activity:7016166450579058688'>LinkedIn</a>
+### <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Screenshots and 🎥 Recordings</a>
+For a longer video demonstration click here and like my post on <a href='https://www.linkedin.com/feed/update/urn:li:activity:7016166450579058688'>LinkedIn</a>
 
 <div align='center'>
 
@@ -252,17 +168,28 @@ For a longer video demonstration click here and like my post on
 
 </div>
 
-## Author
+### <a id='author' style='text-decoration: none; color: inherit;'>👤 Author</a>
 <div style='display: flex; align-items: center;'>
-    <img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
-    <div>
-        <strong>Marcelo Alvarez</strong>
-        <br>
-        <em>Front-end Developer</em><br>
-        <span>"Some AI generated funny quote here 😗"</span><br>
-        <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a>
-    </div>
+		<img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
+		<div>
+				<strong>Marcelo Alvarez</strong>
+				<br>
+				<em>Front-end Developer</em><br>
+				<span>"Some AI generated funny quote here 😗"</span><br>
+				<a href='https://www.linkedin.com/in/mar-alv'>
+					<img
+						alt='LinkedIn'
+						src='https://img.shields.io/badge/LinkedIn-Marcelo%20Alvarez-0077B5?logo=linkedin&logoColor=white'
+					/>
+				</a>
+				<a href='https://mar-alv.github.io/'>
+					<img
+						alt='Portfolio'
+						src='https://img.shields.io/badge/Portfolio-Marcelo%20Alvarez-000?style=flat&logo=portfolio&logoColor=white'
+					/>
+				</a>
+		</div>
 </div>
 
-## License
+### <a id='license' style='text-decoration: none; color: inherit;'>📄 License</a>
 Licensed under [MIT](./LICENSE)
