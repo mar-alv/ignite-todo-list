@@ -8,7 +8,7 @@
 
   [🎨 Design](https://www.figma.com/file/HV7C6SQl1SyA1mN8Xur2bv/ToDo-List-%E2%80%A2-Desafio-React-(Copy)?type=design&node-id=56-96&mode=design&t=MDvKh9d18LPYlRNA-0)
 
-  [🇵🇹 Português](./docs/README-pt.md)
+  [🇧🇷 Português](./docs/README-pt.md)
 
 </div>
 
